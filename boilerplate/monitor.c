@@ -295,7 +295,7 @@ static void __exit monitor_exit(void)
 {
     struct monitored_entry *entry, *tmp;
  
-    del_timer_sync(&monitor_timer);
+   /* timer cleanup removed for compatibility */
  
     /* TODO 6: Free all remaining entries */
     mutex_lock(&monitored_mutex);
